@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🎓 Hobby & Club Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Hobby & Club Recommendation System</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".csv" required>
+            <button type="submit">Upload & Get Recommendations</button>
+        </form>
+
+        {% if recommendations %}
+            <h2>Top Recommendations</h2>
+            <ul>
+                {% for hobby, count in recommendations.items() %}
+                    <li>{{ hobby }} — {{ count }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
