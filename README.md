@@ -4,6 +4,9 @@
   <em>Personalized hobby and club suggestions for university students — powered by data and machine learning!</em>
 </p>
 
+## 🌐 Live Demo  
+🎯 *Try it here:* [Study Time Predictor on Render](https://mlwebsiteproject.onrender.com/)
+
 ---
 
 ## 🌟 Overview
