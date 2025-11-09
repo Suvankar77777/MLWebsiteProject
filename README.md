@@ -5,7 +5,7 @@
 </p>
 
 ## 🌐 Live Demo  
-🎯 *Try it here:* [Study Time Predictor on Render](https://mlwebsiteproject.onrender.com/)
+🎯 *Try it here:* [Hobby & Club Recommendation System on Render](https://mlwebsiteproject.onrender.com/)
 
 ---
 
