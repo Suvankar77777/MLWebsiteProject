@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎓 Hobby & Club Recommendation System</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>🎓 Hobby & Club Recommendation System</h1>
-        <form method="POST" enctype="multipart/form-data">
-            <input type="file" name="file" accept=".csv" required>
-            <button type="submit">Upload & Get Recommendations</button>
-        </form>
+    <div class="wrapper">
+        <header>
+            <h1>🎓 Hobby & Club Recommendation System</h1>
+            <p>Discover hobbies and clubs that match your lifestyle!</p>
+        </header>
 
-        {% if recommendations %}
-            <h2>Top Recommendations</h2>
-            <ul>
-                {% for hobby, count in recommendations.items() %}
-                    <li>{{ hobby }} — {{ count }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+        <main>
+            <form method="POST" enctype="multipart/form-data" class="upload-form">
+                <input type="file" name="file" accept=".csv" required>
+                <button type="submit">📂 Upload & Get Recommendations</button>
+            </form>
+
+            {% if recommendations %}
+            <section class="results">
+                <h2>✨ Your Top Recommendations</h2>
+                <ul>
+                    {% for hobby, count in recommendations.items() %}
+                        <li><strong>{{ hobby }}</strong> — Score: {{ count }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+            {% endif %}
+        </main>
+
+        <footer>
+            <p>Made with ❤️ by <strong>Suvankar Paria</strong> & Team</p>
+        </footer>
     </div>
 </body>
 </html>
